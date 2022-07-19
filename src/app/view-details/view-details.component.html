@@ -1,0 +1,113 @@
+
+<style>
+.me-2{
+  flex: 1 1 auto;
+  margin-right: 50px;
+}
+</style>
+
+<nav class="navbar navbar-expand-lg bg-danger" style="box-shadow: 8px 8px 5px rgb(206, 203, 203);
+padding: 8px 12px;">
+    <div class="container-fluid">
+        <i class="fa-solid fa-plane-departure" style="font-size: 35px; color:white" ></i>
+      <a class="navbar-brand" routerLink="/flightbooking" style="color:white">Flight Booking </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+                
+                <a class="nav-link active" aria-current="page" routerLink="/flightbooking" style="color:white">&nbsp;&nbsp;&nbsp;&nbsp;
+                    <i class="fa-solid fa-house" style="font-size: 19px; color:white"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a class="nav-link active" aria-current="page" routerLink="/bookflight" routerLinkActive="active" style="color:white">Book Fligth</a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a class="nav-link" routerLink="/viewdetails"outerLinkActive="active" style="color:white">View Details</a>
+        
+        </div>
+      </div>
+    </div>
+  </nav><br><br>
+  <h1 style="text-align: center; color:rgb(225, 0, 0)">List of the Flight</h1>
+        
+  <div class="container">
+    
+    <button class="btn btn-success me-2 " data-bs-toggle="modal" data-bs-target="#staticBackdrop">Add Book</button><br><br>
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">Passenger Name</th>
+                <th scope="col">bookingid id</th>
+                <th scope="col">No. of Tickets</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let rows of FlightData ">
+                <th scope="row">{{rows.passengerName}}</th>
+                <td>{{rows.id}}</td>
+                <td>{{rows.numberOfTickets}}</td>
+                <td>{{rows.flight}}</td>
+                <td>
+                    <button (click)="deleteFlight(rows)" class="btn btn-danger">Delete</button>
+                </td>
+            </tr>         
+        </tbody>
+      </table>
+  </div>
+
+  <!-- Modal -->
+<div class="modal fade " style="background-image:url('assets/background.jpg');" id="staticBackdrop" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-primary">
+        <h2 class="modal-title " id="exampleModalLabel" style="color: white; ">Book the Flight</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+
+        <div class="container">
+          <form class="needs-validation was-validated" novalidate="" [formGroup]=formValue >
+            <div class=" position-relative">
+              <label for="validationTooltip01" class="form-label">Passenger Name</label>
+              <input type="text" formControlName="passengerName" class="form-control" id="validationTooltip01" value="" required="">
+              <div class="invalid-tooltip">
+              Field required
+            </div>
+              <div class="valid-tooltip">
+                Here we go!
+              </div>
+            </div><br> <br>
+            <div class="position-relative">
+              <label for="validationTooltip02" class="form-label">number of Tickets</label>
+              <input type="number" formControlName="numberOfTickets" class="form-control" id="validationTooltip02" value="" required="">
+              <div class="invalid-tooltip">
+              Enter the number of tickets greater than 0
+            </div>
+             
+           
+            </div><br> <br>
+            <div class="position-relative">
+              <label for="validationTooltip03" class="form-label">Flight Id</label>
+              <input type="text" formControlName="flight" class="form-control" id="validationTooltip03" required="">
+              <div class="invalid-tooltip">
+                Enter valid flightID
+              </div>
+            </div>
+           <br>
+           <br>
+            <div class="col-12">
+              <button class="btn btn-primary" (click)=" postFlightsDetails()">Book</button>
+            </div>
+            
+          </form>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="cancel" class="btn btn-danger" data-bs-dismiss="modal">close</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,329 @@
+<style>
+   
+</style>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js">
+
+</script>
+<section style="background-image: linear-gradient(180deg, rgb(245, 176, 176), rgb(247, 180, 180),  40%, rgb(148, 30, 30),);">
+<nav class="navbar navbar-expand-lg bg-danger" style="box-shadow: 8px 8px 5px rgb(206, 203, 203);
+padding: 8px 12px;">
+    <div class="container-fluid">
+        <i class="fa-solid fa-plane-departure" style="font-size: 35px; color:white" ></i>
+      <a class="navbar-brand" routerLink="/flightbooking" style="color:white">Flight Booking </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+                
+                <a class="nav-link active" aria-current="page" routerLink="/flightbooking" style="color:white">&nbsp;&nbsp;&nbsp;&nbsp;
+                    <i class="fa-solid fa-house" style="font-size: 19px; color:white"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a class="nav-link active" aria-current="page" routerLink="/bookflight" routerLinkActive="active" style="color:white">Book Fligth</a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a class="nav-link" routerLink="/viewdetails" routerLinkActive="active" style="color:white">View Details</a>
+        </div>
+      </div>
+    </div>
+  </nav><br>
+  <h1 style="text-align: center; color: rgb(193, 12, 12);">Welcome Back to my Book Flight</h1>
+  <br>
+ <div class="mycard">
+
+ <div class="container">
+
+    <table class="table table-success table-striped">
+        <thead>
+            <tr>
+                <th scope="col"></th>
+              <th scope="col">_id</th>
+              <th scope="col">FlightId</th>
+              <th scope="col">AircrafName</th>
+              <th scope="col">Fare</th>
+              <th scope="col">AvailableSeats</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>ObjectId(5...</td>
+              <td>IND-101</td>
+              <td>Deelta Airlines</td>
+              <td>600.0</td>
+              <td>3.0</td>
+              <td>Running</td>
+             
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>ObjectId(5...</td>
+                <td>IND-102</td>
+                <td>JetBlue</td>
+                <td>745.0</td>
+                <td>20.0</td>
+                <td>Cancelled</td>
+
+               
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>ObjectId(5...</td>
+                <td>IND-103</td>
+                <td>United Airlinestd>
+                <td>865.0</td>
+                <td>40.0</td>
+                <td>Cancelled</td>
+                
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>ObjectId(5...</td>
+                <td>IND-104</td>
+                <td>Virgin America</td>
+                <td>580.0</td>
+                <td>10.0</td>
+                <td>Cancelled</td>
+               
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>ObjectId(5...</td>
+                <td>IND-105</td>
+                <td>Allegiant Air</td>
+                <td>650.0</td>
+                <td>47.0</td>
+                <td>Running</td>
+               
+              </tr>
+              <tr>
+                <th scope="row">6</th>
+                <td>ObjectId(5...</td>
+                <td>IND-106</td>
+                <td>Hawaiian Airlines</td>
+                <td>800.0</td>
+                <td>4.0</td>
+                <td>Running</td>
+               
+              </tr>
+              
+              
+          </tbody>
+      </table>
+      <h4 style="text-align: center; color:green">You can find in the table the Airlines available </h4>
+ </div>
+</div>
+
+<div class="container">
+ <hr>
+ <br>
+ <h2 style="text-align: center; color: rgb(193, 12, 12);">Airlines Available</h2>
+    <div class="row gx-5">
+      <div class="col">
+       <div class="p-3">
+        <div class="card">
+            <div class="circle">
+                <div class="imgBox">
+                    <img src="assets/delta.jpg" alt="">
+                </div>
+            </div>
+            <div class="content">
+                <a  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <i class="fa-solid fa-plane"></i>
+                </a>
+                <h3>Delta Airlines</h3>
+                <div class="textIcon">
+                    <h4>IND-101</h4>
+                    <a  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+       </div>
+      </div>
+      <div class="col">
+        <div class="p-3">
+            <div class="card">
+                <div class="circle">
+                    <div class="imgBox">
+                        <img src="assets/jetblue.jpg" alt="">
+                    </div>
+                </div>
+                <div class="content">
+                    <a  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <i class="fa-solid fa-plane"></i>
+                    </a>
+                    <h3>JetBlue</h3>
+                    <div class="textIcon">
+                        <h4>IND-102</h4>
+                        <a  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+      </div>
+    </div>
+  
+    <div class="row gx-5">
+      <div class="col">
+       <div class="p-3 ">
+
+        <div class="card">
+            <div class="circle">
+                <div class="imgBox">
+                    <img src="assets/unitedairline.jpg" alt="">
+                </div>
+            </div>
+            <div class="content">
+                <a  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <i class="fa-solid fa-plane"></i>
+                </a>
+                <h3>United Airlines</h3>
+                <div class="textIcon">
+                    <h4>IND-103</h4>
+                    <a  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+       </div>
+      </div>
+      <div class="col">
+        <div class="p-3">
+
+            <div class="card">
+                <div class="circle">
+                    <div class="imgBox">
+                        <img src="assets/virginamerica.jpg" alt="">
+                    </div>
+                </div>
+                <div class="content">
+                    <a data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <i class="fa-solid fa-plane"></i>
+                    </a>
+                    <h3>Virgin America</h3>
+                    <div class="textIcon">
+                        <h4>IND-104</h4>
+                        <a  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="row gx-5">
+        <div class="col">
+         <div class="p-3">
+          <div class="card">
+              <div class="circle">
+                  <div class="imgBox">
+                      <img src="assets/allegiantair.jpg" alt="">
+                  </div>
+              </div>
+              <div class="content">
+                  <a  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <i class="fa-solid fa-plane"></i>
+                  </a>
+                  <h3>Allegiant Air</h3>
+                  <div class="textIcon">
+                      <h4>IND-105</h4>
+                      <a  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                          <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                      </a>
+                  </div>
+              </div>
+          </div>
+  
+         </div>
+        </div>
+        <div class="col">
+          <div class="p-3">
+              <div class="card">
+                  <div class="circle">
+                      <div class="imgBox">
+                          <img src="assets/hawaiiian.jpg" alt="">
+                      </div>
+                  </div>
+                  <div class="content">
+                      <a  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <i class="fa-solid fa-plane"></i>
+                      </a>
+                      <h3>Hawaiian Airlines</h3>
+                      <div class="textIcon">
+                          <h4>IND-106</h4>
+                          <a  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                              <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+  
+          </div>
+        </div>
+      </div>
+    
+      <div class="row gx-5">
+        <div class="col">
+         <div class="p-3 ">
+  
+          <div class="card">
+              <div class="circle">
+                  <div class="imgBox">
+                      <img src="assets/senegalairline.jpeg" alt="">
+                  </div>
+              </div>
+              <div class="content">
+                  <a  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <i class="fa-solid fa-plane"></i>
+                  </a>
+                  <h3>Senegal Airlines</h3>
+                  <div class="textIcon">
+                      <h4>IND-107</h4>
+                      <a  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                          <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                      </a>
+                  </div>
+              </div>
+          </div>
+         </div>
+        </div>
+        <div class="col">
+          <div class="p-3">
+  
+              <div class="card">
+                  <div class="circle">
+                      <div class="imgBox">
+                          <img src="assets/airsenegal.jpg" alt="">
+                      </div>
+                  </div>
+                  <div class="content">
+                      <a  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <i class="fa-solid fa-plane"></i>
+                      </a>
+                      <h3>DouCode</h3>
+                      <div class="textIcon">
+                          <h4>IND-108</h4>
+                          <a  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                              <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+</div>
+ <br><br>
+ 
+ <div class="card-footer text-muted; bg-danger" style="height: 50px;">
+    2 days ago
+  </div>
+</section>
+
+

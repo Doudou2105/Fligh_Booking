@@ -1,0 +1,42 @@
+<style>
+    .body {
+      background-image: url('assets/background.jpg');
+      height: 100%;
+      width: 100%;
+    }
+
+    </style>
+    
+<div class="body">
+<nav class="navbar navbar-expand-lg bg-primary" style="box-shadow: 8px 8px 5px rgb(13, 19, 85);
+padding: 8px 12px;">
+    <div class="container-fluid">
+        <i class="fa-solid fa-plane-departure" style="font-size: 35px; color:white" ></i>
+      <a class="navbar-brand" routerLink="/flightbooking" style="color:white">Flight Booking </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav"  >
+            
+            <a class="nav-link active" aria-current="page" routerLink="/flightbooking" style="color:white">&nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fa-solid fa-house" style="font-size: 19px; color:white"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a class="nav-link active" aria-current="page" routerLink="/bookflight" style="color:white">Book Fligth</a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a class="nav-link" routerLink="/viewdetails" style="color:white;">View Details</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+<br><br>
+<h1 style="text-align: center; color:whitesmoke">Welcome to Fligth Booking System !</h1>
+<h3>Quick Guidelines :</h3>
+<ol>
+    <li>While booking, enter proper fligth id(having 4 digit number).</li>
+    <li>Number or booking tickets can not be more than 40.</li>
+  </ol>
+  <br>
+  <button routerLink="/bookflight" class="btn btn-primary" >Got it</button>
+</div>
+
+</div>
